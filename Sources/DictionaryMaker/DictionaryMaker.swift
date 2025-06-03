@@ -9,3 +9,6 @@
 /// produces a tuple `(x + y, "x + y")`.
 @freestanding(expression)
 public macro stringify<T>(_ value: T) -> (T, String) = #externalMacro(module: "DictionaryMakerMacros", type: "StringifyMacro")
+
+@freestanding(expression)
+public macro dictionaryMaker(_ value: Any...) -> [AnyHashable: Any] = #externalMacro(module: "DictionaryMakerMacros", type: "DictionaryMakerMacro")

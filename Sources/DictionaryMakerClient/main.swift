@@ -1,8 +1,8 @@
 import DictionaryMaker
 
-let a = 17
-let b = 25
+let name = "me"
+let age = 43
+let dict = #dictionaryMaker(name, age)
+print(dict)
 
-let (result, code) = #stringify(a + b)
 
-print("The value \(result) was produced by the code \"\(code)\"")
