@@ -13,10 +13,10 @@ let package = Package(
             name: "DictionaryMaker",
             targets: ["DictionaryMaker"]
         ),
-        .executable(
-            name: "DictionaryMakerClient",
-            targets: ["DictionaryMakerClient"]
-        ),
+//        .executable(
+//            name: "DictionaryMakerClient",
+//            targets: ["DictionaryMakerClient"]
+//        ),
     ],
     dependencies: [
         .package(url: "https://github.com/swiftlang/swift-syntax.git", from: "600.0.0-latest"),
@@ -37,7 +37,7 @@ let package = Package(
         .target(name: "DictionaryMaker", dependencies: ["DictionaryMakerMacros"]),
 
         // A client of the library, which is able to use the macro in its own code.
-        .executableTarget(name: "DictionaryMakerClient", dependencies: ["DictionaryMaker"]),
+//        .executableTarget(name: "DictionaryMakerClient", dependencies: ["DictionaryMaker"]),
 
         // A test target used to develop the macro implementation.
         .testTarget(
